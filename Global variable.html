@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <script>
+        var a, b;
+
+        function Mult(a, b) {
+            return a * b;
+        }
+
+        function Div() {
+            return a / b;
+        }
+
+        function bindValues(){
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+        }
+
+        function getMult() {
+            bindValues();
+            document.getElementById("answer").value = Mult(a, b);
+        }
+
+        function getDiv() {
+            bindValues();
+            document.getElementById("answer").value = Div(a, b);
+        }
+    </script>
+</head>
+
+<body>
+    Enter the First number : <input id="first">
+    Enter the Second number: <input id="second">
+    <button onclick="getMult()">Mult</button>
+    <button onclick="getDiv()">Div</button>
+
+    <input id="answer">
+</body>
+
+</html>
